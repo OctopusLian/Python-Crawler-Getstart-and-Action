@@ -39,4 +39,4 @@ def save(chapter,article):
     with open(os.path.join('动物农场',chapter+'.txt'),'w',encoding='utf-8') as f:
         f.write(article)
 
-save(get_article(get_toc()))
+save(get_article(get_toc(urllib2.urlopen(url).read())))
